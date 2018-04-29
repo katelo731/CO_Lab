@@ -1,4 +1,4 @@
-# CO_Lab1
+# 32-bits_ALU
 Lab1 of Computer Organization in NCTU
 
 
