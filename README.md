@@ -31,15 +31,23 @@ Lab1 of Computer Organization in NCTU
   #### (1) Mux_Write_Reg :
    
     R-type 與 I-type 兩種指令要寫入 register 的 address 來源不同，所以需要這個 Mux 來選擇address 的來源。
+    
     Mux 透過 Decoder 判斷型別並傳回的值(RegDst_ctrl)，選擇要寫入來自於instr_rt 或 instr_rd 的 address。
 
    #### (2) Mux_ALUSrc :
 
-    指令的型態不同讓 ALU 的第二筆資料來源不同，所以需要這個 Mux 來選擇資料是來自於 register 或是 sign-extend 後的 immediate value。
+    指令的型態不同讓 ALU 的第二筆資料來源不同，所以需要這個 Mux 來選擇資料是來自
+    
+    於 register 或是 sign-extend 後的 immediate value。
 
    #### (3) Mux_PC_Source :
 
-    這個 Mux 的功能是選擇下一筆指令的位址，如果不需要 branch，就選擇來自 Adder1 的位址，如果需要 branch，就選擇來自 Adder2 的位址。控制選擇的訊號來自於 Decoder 的 Branch_ctrl 跟 Alu_zero 進行 AND 後的結果，因為即使Decoder 判斷需要 branch，但 ALU 的結果有可能不符合跳轉條件(例如指令是 BEQ 但 rs != rt)，所以需要 AND 確定跳轉條件都符合。
+    這個 Mux 的功能是選擇下一筆指令的位址，如果不需要 branch，就選擇來自 Adder1 的位址，
+    如果需要 branch，就選擇來自 Adder2 的位址。
+    
+    控制選擇的訊號來自於 Decoder 的 Branch_ctrl 跟 Alu_zero 進行 AND 後的結果，
+    因為即使Decoder 判斷需要 branch，但 ALU 的結果有可能不符合跳轉條件
+    (例如指令是 BEQ 但 rs != rt)，所以需要 AND 確定跳轉條件都符合。
 
 ### 5. Reg_File.v : (from TA)
 
