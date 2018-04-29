@@ -39,9 +39,7 @@ Lab1 of Computer Organization in NCTU
 
    #### (3) Mux_PC_Source :
 
-    這個 Mux 的功能是選擇下一筆指令的位址，如果不需要 branch，就選擇來自 Adder1 的位址，如果需要 branch，就選擇來自 Adder2 的位址。
-    控制選擇的訊號來自於 Decoder 的 Branch_ctrl 跟 Alu_zero 進行 AND 後的結果，因為即使Decoder 判斷需要 branch，
-    但 ALU 的結果有可能不符合跳轉條件(例如指令是 BEQ 但 rs != rt)，所以需要 AND 確定跳轉條件都符合。
+    這個 Mux 的功能是選擇下一筆指令的位址，如果不需要 branch，就選擇來自 Adder1 的位址，如果需要 branch，就選擇來自 Adder2 的位址。控制選擇的訊號來自於 Decoder 的 Branch_ctrl 跟 Alu_zero 進行 AND 後的結果，因為即使Decoder 判斷需要 branch，但 ALU 的結果有可能不符合跳轉條件(例如指令是 BEQ 但 rs != rt)，所以需要 AND 確定跳轉條件都符合。
 
 ### 5. Reg_File.v : (from TA)
 
