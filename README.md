@@ -10,7 +10,7 @@ Lab1 of Computer Organization in NCTU
 
 ### 1. ProgramCounter.v : (from TA)
 
-    把 32-bit bus 從 pc_next 傳給 pc_data。
+     把 32-bit bus 從 pc_next 傳給 pc_data。
 
 ### 2. Adder.v :
 
@@ -24,12 +24,12 @@ Lab1 of Computer Organization in NCTU
 
 ### 3. Instr_Memory.v : (from TA)
 
-    讀 address 並輸出指令。
+     讀 address 並輸出指令。
 
 ### 4. MUX_2to1.v :
 
-   #### (1) Mux_Write_Reg :
-  
+  #### (1) Mux_Write_Reg :
+   
     R-type 與 I-type 兩種指令要寫入 register 的 address 來源不同，所以需要這個 Mux 來選擇
     address 的來源。Mux 透過 Decoder 判斷型別並傳回的值(RegDst_ctrl)，選擇要寫入來自於
     instr_rt 或 instr_rd 的 address。
