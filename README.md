@@ -6,19 +6,19 @@ Lab1 of Computer Organization in NCTU
 
 # Detailed description of the implementation :
 
->1. ProgramCounter.v : (from TA)
+1. ProgramCounter.v : (from TA)
 
-  把 32-bit bus 從 pc_next 傳給 pc_data。
+    把 32-bit bus 從 pc_next 傳給 pc_data。
 
-###2. Adder.v :
+2. Adder.v :
 
-  ####(1) Adder1 :
-  
-   得到的結果是 PC+4，也就是假設指令不需要 branch，先算好下一條指令的位址。
+    (1) Adder1 :
+    
+    得到的結果是 PC+4，也就是假設指令不需要 branch，先算好下一條指令的位址。
    
-  ####(2) Adder2 :
-  
-   計算 branch 後對應指令的位址，是由 PC+4 和指令的 immediate 值(Sign-Extend 後)相加。
+    (2) Adder2 :
+    
+    計算 branch 後對應指令的位址，是由 PC+4 和指令的 immediate 值(Sign-Extend 後)相加。
 
 ###3. Instr_Memory.v : (from TA)
 
