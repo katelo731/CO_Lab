@@ -6,7 +6,7 @@ Lab1 of Computer Organization in NCTU
 
 # Detailed description of the implementation :
 
-###1. ProgramCounter.v : (from TA)
+>1. ProgramCounter.v : (from TA)
 
   把 32-bit bus 從 pc_next 傳給 pc_data。
 
