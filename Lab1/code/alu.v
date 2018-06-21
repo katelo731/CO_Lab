@@ -3,11 +3,11 @@
 
 module alu(
 	input rst_n,         				// negative reset            (input)
-	input [32-1:0] src1,          	// 32 bits source 1          (input)
-	input	[32-1:0]	src2,          	// 32 bits source 2          (input)
-	input	[4-1:0]	ALU_control,   	// 4 bits ALU control input  (input)
-	input	[3-1:0]	bonus_control, 	// 3 bits bonus control input(input)
-	output reg [32-1:0] result,      // 32 bits result            (output)
+	input [32-1:0] src1,          			// 32 bits source 1          (input)
+	input	[32-1:0]	src2,   	       	// 32 bits source 2          (input)
+	input	[4-1:0]	ALU_control,   			// 4 bits ALU control input  (input)
+	input	[3-1:0]	bonus_control, 			// 3 bits bonus control input(input)
+	output reg [32-1:0] result,      		// 32 bits result            (output)
 	output reg zero,          			// 1 bit when the output is 0, zero must be set (output)
 	output reg cout,          			// 1 bit carry out           (output)
 	output reg overflow       			// 1 bit overflow            (output)
@@ -19,7 +19,7 @@ wire [1:0] op;
 wire [31:0] alu_cout;
 
 parameter zc=1'b0;
-parameter comp=3'b100;		// let alu_top's result=1'b0 while SET
+parameter comp=3'b100;					// let alu_top's result=1'b0 while SET
 
 assign equal = (src1 ^ src2)? 1'b0 : 1'b1;		// bitwise check equality
 
