@@ -6,3 +6,4 @@
 | Lab2           | Single-Cycle_CPU_simple_ver. |
 | Lab3           | Single-Cycle_CPU             |
 | Lab4           | Cache_Simulator              |
+| Lab5           | Cache_Performance            |
